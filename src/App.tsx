@@ -2,9 +2,10 @@ import HeroSection from './components/HeroSection'
 import MagicGarden from './components/MagicGarden'
 import Flowers from './components/Flowers'
 import SplitScrollText from './components/SplitScrollText'
+import useIsDesktop from './hooks/useIsDesktop';
 
 function App() {
-
+  const isDesktop = useIsDesktop();
   return (
     <>
       <div style={{
@@ -27,18 +28,18 @@ function App() {
         {/* Your Content/Components */}
         <HeroSection firstTitle='Yasmine, la fleur qui ne me voit pas.' secondTitle="Et je n'oublirai jamais le 22 décembre 2025." />
       </div>
-      <div className='bg-white relative px-39'>
+      <div className={`bg-white relative ${isDesktop ? "py-40 px-20" : "py-16 px-5"}`}>
         <h1 className='text-black outline-text font-bold'>Je pensais que j'avais peur. Peur de te faire savoir que je pense à toi tout le temps, peur de subir un rejet.
           <br />
           <br />
           Mais au bout d'un moment, je me suis dit que ça ne sert à rien d'admirer une personne sans lui dire, alors que j'en ai la possibilité.
-          <br /><br /> C'est de ce regret-là que j'avais peur, finalement. 
+          <br /><br /> C'est de ce regret-là que j'avais peur, finalement.
           <br /><br />Alors voilà...
         </h1>
-        
+
       </div>
       <div className="bg-white relative py-15">
-        <h1 className='hero-title playfair-display italic px-39'>I like you,</h1>
+        <h1 className={`hero-title playfair-display italic ${isDesktop ? "py-40 px-20" : "py-16 px-5"}`}>I like you,</h1>
         <SplitScrollText text='Not in an "I want to kiss you" way,' />
         <SplitScrollText text='But in a way where I want to hold your hands,' />
         <SplitScrollText text='Intertwine our fingers,' />
@@ -47,7 +48,7 @@ function App() {
 
 
       <div className="bg-white relative py-5">
-        <h1 className='hero-title playfair-display italic px-39'>I like you,</h1>
+        <h1 className={`hero-title playfair-display italic ${isDesktop ? "py-40 px-20" : "py-16 px-5"}`}>I like you,</h1>
         <SplitScrollText text='Not in a "just passing by" way,' />
         <SplitScrollText text='But in a way that makes me stay,' />
         <SplitScrollText text='To hear your heartbeat in the silence,' />
@@ -70,7 +71,7 @@ function App() {
         />
         <div className='relative'>
           <div className="row">
-            <div className="col-6 px-39">
+            <div className={`col-6 ${isDesktop ? " py-40 px-20" : "py-16 px-5"}`}>
               <h1 className='text-black outline-text font-bold'>I hope you’ll be mine,</h1>
               <h1 className='text-black outline-text'>Not as something to own,</h1>
               <h1 className='text-black outline-text'>But like the stars belong to the sky,</h1>
@@ -80,7 +81,7 @@ function App() {
         </div>
         <div className='relative pt-30'>
           <div className="row">
-            <div className="col-6 px-39">
+            <div className={`col-6 ${isDesktop ? " py-40 px-20" : "py-16 px-5"}`}>
               <h1 className='text-black outline-text font-bold'>I hope you’ll never go,</h1>
               <h1 className='text-black outline-text'>Not because I’d hold you captive,</h1>
               <h1 className='text-black outline-text'>But because we’d stand side by side,</h1>
@@ -91,7 +92,7 @@ function App() {
         </div>
         <div className='relative pt-30'>
           <div className="row">
-            <div className="col-6 px-39">
+            <div className={`col-6 ${isDesktop ? " py-40 px-20" : "py-16 px-5"}`}>
               <h1 className='text-black outline-text font-bold'>The problem isn’t that love is blind,</h1>
               <h1 className='text-black hero-title '>No… WE ARE BLIND.</h1>
               <h1 className='text-black outline-text'>You don’t even really know me,</h1>
