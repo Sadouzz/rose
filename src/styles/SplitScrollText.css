@@ -1,0 +1,17 @@
+.splitComp {
+    opacity: 0;
+    text-align: center;
+    font-size: clamp(2rem, 6vw, 7rem);
+    will-change: transform;
+    color: #ec4899;
+}
+
+
+
+.splitComp * {
+    will-change: transform;
+}
+
+.spacer {
+    height: 5vh;
+}
