@@ -1,12 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import HeroSection from './components/HeroSection'
-import HeroSection1 from './components/HeroSection1'
 import MagicGarden from './components/MagicGarden'
 import Flowers from './components/Flowers'
 import SplitScrollText from './components/SplitScrollText'
-import ScrollReveal from './components/ScrollReveal'
 
 function App() {
 

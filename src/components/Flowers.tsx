@@ -1,23 +1,15 @@
 import '../styles/flow.scss'
+
 export default function Flowers() {
     // Array to handle the repetitive grass/leaf sections efficiently
-    const longGSections = [
-        { id: 0, delays: ["3s", "2.2s", "3.4s", "3.6s"] },
-        { id: 1, delays: ["3.6s", "3.8s", "4s", "4.2s"] },
-        { id: 2, delays: ["4s", "4.2s", "4.4s", "4.6s"] },
-        { id: 3, delays: ["4s", "4.2s", "3s", "3.6s"] },
-        { id: 4, delays: ["4s", "4.2s", "3s", "3.6s"] },
-        { id: 5, delays: ["4s", "4.2s", "3s", "3.6s"] },
-        { id: 6, delays: ["4.2s", "4.4s", "4.6s", "4.8s"] },
-        { id: 7, delays: ["3s", "3.2s", "3.5s", "3.6s"] },
-    ];
+    
 
     return (
         <>
             <div className="night"></div>
-            <div className="flowers">
+            <div className="flowers flex items-center justify-center  relative">
                 {/* Individual Flowers */}
-                {[1, 2, 3].map((num) => (
+                {[1].map((num) => (
                     <div key={`flower-${num}`} className={`flower flower--${num}`}>
                         <div className={`flower__leafs flower__leafs--${num}`}>
                             {[1, 2, 3, 4].map((l) => (
@@ -37,15 +29,15 @@ export default function Flowers() {
                 ))}
 
                 {/* Decorative Grass and Elements */}
-                {longGSections.map((section) => (
+                {/* {longGSections.map((section) => (
                     <div key={section.id} className={`long-g long-g--${section.id}`}>
                         {section.delays.map((delay, index) => (
-                            <div key={index} className="grow-ans" style={{ "--d": delay }}>
+                            <div key={index} className="grow-ans" style={{ "--d": delay } as React.CSSProperties}>
                                 <div className={`leaf leaf--${index}`}></div>
                             </div>
                         ))}
                     </div>
-                ))}
+                ))} */}
             </div>
         </>
     );
